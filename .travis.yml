@@ -1,0 +1,21 @@
+language: java
+sudo: false
+
+jdk:
+  - openjdk7
+  - openjdk8
+  # - openjdk9
+  # - openjdk10
+  # - openjdk11
+  - oraclejdk7
+  - oraclejdk8
+
+cache:
+  directories:
+    - "$HOME/.m2/repository"
+    - "$HOME/.m2/wrapper"
+script:
+  - ./mvnw clean package -P full -Dsphinx.binUrl=https://github.com/hengyunabc/sphinx-binary/releases/download/v0.4.0.1/sphinx.osx-x86_64
+
+notifications:
+  email: false
