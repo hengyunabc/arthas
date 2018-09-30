@@ -25,3 +25,14 @@ after_success:
 
 notifications:
   email: false
+
+deploy:
+  provider: releases
+  api_key:
+    - secure: "I4UjvCvJdUxc0g/q5a0fqoyBB8xiVlQXAO2bgLRFKCjjQTD9p5Ms9WbGW36T+vTHOo7lb9wSTdQgliHowBspWZivfDQaKSXSAlw9rlnGuOb8euNoEP1UQvXeRs8XxRn8BK1y+GS+auBM8fUVBouS4Y20seU8Up9YJhBl9DGgd8ZkhOtP0Zxca9q5wSlXx2FeVZWP5GlVn+R3q9XOC8NS2y3na4zVPCEehSlGQkOJ7+iDROb0kReQvr4NOZEM5qriyFTAvMeV403w8kCaXSHwIqFCcrphIkt2aol0CXqwavUfAm9LABBO4nzV6+vyjkZOceKIEDZLVfy6JZHlHd/rJ67pFL+AdxaQAodE3WmSQUe1e47Mm2QNEKQsMQJBVfmeSsfCN5V143rqCUvjHoXWnOhd4ohAi0NKlrSBEXYWaRw4M6SFsDXKCiVgY07i23+66HrEyTiZvAsBQtNxIOgKy9STlP8532QOl/Up39qFBNrLPxr0f3s8HI/kmrxT+fxpXmNeordvWV/GLwgTWFNcDH7k8PI0Y2CqMDiUjAnXvMFMjRAt2cE06RZFz156pjhTn2tW8PcueuwcbmR6WWRQAig62MOaQtRQsocnhGr4IWK/DArWgOSHtJDqkyNg96Cdd0NBotNTLb/4JmeH4bVDbU9lM3uUysdjeYeveEOeMeM="
+  file_glob: true
+  file: "packaging/target/*.zip"
+  skip_cleanup: true
+  on:
+    tags: true
+
