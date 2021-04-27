@@ -17,7 +17,7 @@ jobs:
         run: ./mvnw package
       - uses: actions/upload-artifact@v2
         with:
-          name: vmtool_lib
+          name: lib
           path: arthas-vmtool/target/classes/lib*
 
   mac:
@@ -34,7 +34,7 @@ jobs:
         run: ./mvnw package
       - uses: actions/upload-artifact@v2
         with:
-          name: vmtool_lib
+          name: lib
           path: arthas-vmtool/target/classes/lib*
 
   windows:
@@ -51,5 +51,5 @@ jobs:
         run: ./mvnw package
       - uses: actions/upload-artifact@v2
         with:
-          name: vmtool_lib
+          name: lib
           path: arthas-vmtool/target/classes/*.dll
