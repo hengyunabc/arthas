@@ -85,7 +85,7 @@
             <properties>
                 <os_name>windows</os_name>
                 <os_arch_option>-m64</os_arch_option>
-                <lib_name>ArthasJniLibrary-x64.dll</lib_name>
+                <lib_name>libArthasJniLibrary-x64.dll</lib_name>
             </properties>
         </profile>
         <profile>
@@ -99,7 +99,7 @@
             <properties>
                 <os_name>windows</os_name>
                 <os_arch_option>-m64</os_arch_option>
-                <lib_name>ArthasJniLibrary-amd64.dll</lib_name>
+                <lib_name>libArthasJniLibrary-amd64.dll</lib_name>
             </properties>
         </profile>
     </profiles>
