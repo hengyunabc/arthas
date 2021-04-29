@@ -59,6 +59,7 @@
         <module>math-game</module>
         <module>spy</module>
         <module>common</module>
+        <module>arthas-vmtool</module>
         <module>tunnel-common</module>
         <module>tunnel-client</module>
         <module>core</module>
@@ -215,6 +216,11 @@
                 <groupId>org.zeroturnaround</groupId>
                 <artifactId>zt-zip</artifactId>
                 <version>1.14</version>
+            </dependency>
+            <dependency>
+                <groupId>org.scijava</groupId>
+                <artifactId>native-lib-loader</artifactId>
+                <version>2.0.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
