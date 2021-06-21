@@ -21,12 +21,14 @@ jobs:
         run: mvn clean package -P full
 
       - name: Release
-        uses: docker://antonyurchenko/git-release:latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          args: |
+          files: |
             packaging/target/*.zip
             packaging/target/*.deb
             packaging/target/*.rpm
             tunnel-server/target/*fatjar.jar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
