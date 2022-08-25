@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: ${{ matrix.java }} 
-          distribution: 'adopt'
+          distribution: 'zulu'
           cache: 'maven'
       - name: Build with Maven
         run: mvn clean package -P full
@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: 8
-          distribution: 'adopt'
+          distribution: 'zulu'
           cache: 'maven'
       - name: save java8 home
         run: |
@@ -41,7 +41,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java }}
-          distribution: 'adopt'
+          distribution: 'zulu'
           cache: 'maven'
       - name: Build with Maven
         run: |
