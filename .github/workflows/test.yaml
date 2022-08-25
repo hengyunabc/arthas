@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [12, 13, 14 , 17, 18, '19.0.75']
+        java: [12, 13, 14 , 17, 18, '19.0.75-ea','19.0.0-ea.33']
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 1.8
