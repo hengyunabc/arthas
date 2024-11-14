@@ -57,9 +57,9 @@ jobs:
       # 步骤 8：复制指定文件到仓库目录
       - name: Copy binary files to repository
         run: |
-          cp /tmp/arthas-bin/arthas-bin/as.sh ./
-          cp /tmp/arthas-bin/arthas-bin/arthas-boot.jar ./
-          cp /tmp/arthas-bin/arthas-bin/math-game.jar ./
+          cp /tmp/arthas-bin/as.sh ./
+          cp /tmp/arthas-bin/arthas-boot.jar ./
+          cp /tmp/arthas-bin/math-game.jar ./
 
       # 步骤 9：赋予 as.sh 可执行权限
       - name: Make as.sh executable
