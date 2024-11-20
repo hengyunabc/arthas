@@ -31,5 +31,4 @@ jobs:
         run: |
           VERSION="${{ github.event.inputs.version }}"
           docker buildx build . --build-arg ARTHAS_VERSION=$VERSION --build-arg MIRROR=true -t hengyunabc/arthas:$VERSION  -t hengyunabc/arthas:latest --platform=linux/arm64,linux/amd64 --push
-
-#docker buildx build .  --build-arg ARTHAS_VERSION=3.6.5  --build-arg MIRROR=true -f Dockerfile-No-Jdk -t hengyunabc/arthas:3.6.5-no-jdk --platform=linux/arm64,linux/amd64  --push
+          docker buildx build .  --build-arg ARTHAS_VERSION=$VERSION   --build-arg MIRROR=true -f Dockerfile-No-Jdk -t hengyunabc/arthas:$VERSION-no-jdk --platform=linux/arm64,linux/amd64  --push
