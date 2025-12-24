@@ -82,7 +82,7 @@ jobs:
           path: arthas-vmtool/target/libArthas*
 
   commit_vmtool_files:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     needs: [build-linux-x64, build-linux-aarch64, build-mac, build-windows]
     steps:
       - name: Checkout Upstream Repo
