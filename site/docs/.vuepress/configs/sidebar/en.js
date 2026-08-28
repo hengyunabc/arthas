@@ -38,6 +38,7 @@ export const sidebarEN = {
             "/en/doc/memory.md",
             "/en/doc/monitor.md",
             "/en/doc/ognl.md",
+            "/en/doc/ognl-express.md",
             "/en/doc/options.md",
             "/en/doc/perfcounter.md",
             "/en/doc/profiler.md",

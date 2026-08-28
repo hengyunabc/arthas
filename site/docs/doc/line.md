@@ -49,6 +49,8 @@
 
 局部变量名和值依赖目标类编译时保留 `LocalVariableTable` 调试信息。如果目标类没有调试信息，`localVarMap` 可能为空或不完整。
 
+复杂的观察和条件表达式、空值处理及排错方法参见 [OGNL 复杂表达式使用技巧](ognl-express.md)。
+
 ## 使用示例
 
 ### 启动 Demo

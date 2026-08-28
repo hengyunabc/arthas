@@ -112,6 +112,8 @@ In Arthas 4.3.1 and earlier, convert Unicode characters to the `\u` representati
 ognl '@java.lang.System@out.println("Hello \u4e2d\u6587")'
 ```
 
+See [Tips for complex OGNL expressions](ognl-express.md) for complex syntax, formatting constraints, and troubleshooting.
+
 ### java.lang.ClassFormatError: null, skywalking arthas compatible use
 
 When error log appear `java.lang.ClassFormatError: null`, it is usually modified by other bytecode tools that are not compatible with arthas modified bytecode.

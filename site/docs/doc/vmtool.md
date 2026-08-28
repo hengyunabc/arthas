@@ -82,6 +82,8 @@ vmtool --action getInstances -c 19469ea2 --className org.springframework.context
 vmtool --action getInstances --classLoaderClass org.springframework.boot.loader.LaunchedURLClassLoader --className org.springframework.context.ApplicationContext --express 'instances[0].getBeanDefinitionNames()'
 ```
 
+在 `instances` 上编写复杂筛选、投影或空值分支时，请参考 [OGNL 复杂表达式使用技巧](ognl-express.md)。
+
 ### 过滤对象
 
 对 `getInstances` 返回的 `instances` 数组，可以继续使用 OGNL 选择表达式 `.{? 条件}` 做过滤，其中 `#this` 表示当前遍历到的对象。

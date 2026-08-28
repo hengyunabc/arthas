@@ -42,6 +42,8 @@ Parameter `[c:]` stands for cycles of statistics. Its value is an integer value 
 |                  `[b]` | evaluate the condition-expression before method invoke                                                 |
 |            `[m <arg>]` | Specify the max number of matched Classes, the default value is 50. Long format is `[maxMatch <arg>]`. |
 
+`condition-expression` uses OGNL syntax. See [Core variables in expressions](advice-class.md) for available variables and [Tips for complex OGNL expressions](ognl-express.md) for complex conditions and troubleshooting.
+
 ## Usage
 
 ```bash

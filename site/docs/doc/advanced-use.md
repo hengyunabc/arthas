@@ -32,8 +32,8 @@ Arthas 在 docker 容器中使用配置参考。
 
 ## ognl 表达式用法
 
+- [OGNL 复杂表达式使用技巧](ognl-express.md)
 - [ognl 表达式的用法说明](https://github.com/alibaba/arthas/issues/11)
-- [一些 ognl 特殊用法](https://github.com/alibaba/arthas/issues/71)
 
 ## IDEA Plugin
 

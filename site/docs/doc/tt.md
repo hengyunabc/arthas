@@ -108,6 +108,8 @@ Affect(class count:1 , method count:1) cost in 130 ms, listenerId: 1.
 
   前边看到了很多条件表达式中，都使用了 `params[0]`，有关这个变量的介绍，请参考[表达式核心变量](advice-class.md)
 
+  复杂的筛选、投影、空值处理及 AI Agent 生成建议参见 [OGNL 复杂表达式使用技巧](ognl-express.md)。
+
 ### 检索调用记录
 
 当你用 `tt` 记录了一大片的时间片段之后，你希望能从中筛选出自己需要的时间片段，这个时候你就需要对现有记录进行检索。

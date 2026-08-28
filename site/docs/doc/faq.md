@@ -112,6 +112,8 @@ Arthas 4.3.1 及更早版本不支持直接输入中文/Unicode 字符，可以�
 ognl '@java.lang.System@out.println("Hello \u4e2d\u6587")'
 ```
 
+更复杂的 OGNL 写法、格式约束与排错方法参见 [OGNL 复杂表达式使用技巧](ognl-express.md)。
+
 ### java.lang.ClassFormatError: null、skywalking arthas 兼容使用
 
 当出现这个错误日志`java.lang.ClassFormatError: null`,通常情况下都是被其他字节码工具修改过与 arthas 修改字节码不兼容。

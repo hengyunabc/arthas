@@ -66,6 +66,10 @@ Arthas MCP Server integrates 29 diagnostic tools, categorized by functionality:
 | **viewfile** | View file contents (only within configured directory whitelist), supports cursor/offset pagination to avoid returning large content all at once |
 | **options**  | View or modify Arthas global options                                                                                                            |
 
+::: tip
+Before an AI agent supplies expression parameters to `ognl`, `getstatic`, `vmtool`, `watch`, `trace`, `monitor`, `stack`, or `tt`, read [Tips for complex OGNL expressions](ognl-express.md). It explains raw expression parameters versus complete commands, variables available in each context, and incremental validation.
+:::
+
 ## Quick Start
 
 ### 1. Configure MCP Service

@@ -38,6 +38,7 @@ export const sidebarZH = {
             "/doc/memory.md",
             "/doc/monitor.md",
             "/doc/ognl.md",
+            "/doc/ognl-express.md",
             "/doc/options.md",
             "/doc/perfcounter.md",
             "/doc/profiler.md",

@@ -88,8 +88,7 @@ Tips:
 Advanced:
 
 - [Critical fields in expression](advice-class.md)
-- [Special usage](https://github.com/alibaba/arthas/issues/71)
-- [OGNL official guide](https://commons.apache.org/dormant/commons-ognl/language-guide.html)
+- [Tips for complex OGNL expressions](ognl-express.md)
 
 ### List all records
 

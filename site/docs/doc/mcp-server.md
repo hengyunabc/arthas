@@ -66,6 +66,10 @@ Arthas MCP Server 集成了 29 个诊断工具，按功能分类如下：
 | **viewfile** | 查看文件内容（仅允许在配置的目录白名单内查看），支持 cursor/offset 分段读取，避免一次性返回大量内容 |
 | **options**  | 查看或修改 Arthas 全局开关选项                                                                      |
 
+::: tip
+AI Agent 调用 `ognl`、`getstatic`、`vmtool`、`watch`、`trace`、`monitor`、`stack` 或 `tt` 的表达式参数前，建议先阅读 [OGNL 复杂表达式使用技巧](ognl-express.md)。其中说明了原始表达式参数与完整命令的区别、各命令可用变量以及逐步验证方法。
+:::
+
 ## 快速开始
 
 ### 1. 配置 MCP 服务

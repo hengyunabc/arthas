@@ -82,6 +82,8 @@ The return result of the `getInstances` action is bound to the `instances` varia
 vmtool --action getInstances --classLoaderClass org.springframework.boot.loader.LaunchedURLClassLoader --className org.springframework.context.ApplicationContext --express 'instances[0].getBeanDefinitionNames()'
 ```
 
+See [Tips for complex OGNL expressions](ognl-express.md) when writing complex selections, projections, or null branches over `instances`.
+
 ### Filter objects
 
 For the `instances` array returned by `getInstances`, you can further filter objects with the OGNL selection expression `.{? condition}`. Here `#this` refers to the current object being evaluated.

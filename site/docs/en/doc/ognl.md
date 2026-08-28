@@ -19,8 +19,7 @@ Since 3.0.5.
 
 ## Usage
 
-- [Special usages](https://github.com/alibaba/arthas/issues/71)
-- [OGNL official guide](https://commons.apache.org/dormant/commons-ognl/language-guide.html)
+- [Tips for complex OGNL expressions](ognl-express.md), including collection selection, projection, grouping, null handling, and guidance for AI-agent generation and validation
 
 Call static method:
 

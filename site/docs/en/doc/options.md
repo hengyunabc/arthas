@@ -119,6 +119,8 @@ since 3.6.0
 
 For new users, there may be misuses when writing ognl expressions.
 
+See [Tips for complex OGNL expressions](ognl-express.md) for read-only constraints, a generation checklist, and error classification.
+
 For example, for `Student`, when judging the age is equal to 18, the conditional expression may be mistakenly written as `target.age=18`, which actually sets the `age` of the current object to 18. The correct spelling is `target.age==18`.
 
 In order to prevent misuse like the above, Arthas enables `strict` mode by default, in `ognl` expressions, it is forbidden to update the property of the object or call the `setter` method.

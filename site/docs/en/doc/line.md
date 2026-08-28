@@ -49,6 +49,8 @@ The `line` command inserts probes at specified source line numbers in matched me
 
 Local variable names and values depend on the target bytecode retaining `LocalVariableTable` debug metadata. If the target class has no debug metadata, `localVarMap` may be empty or incomplete.
 
+See [Tips for complex OGNL expressions](ognl-express.md) for complex observation and condition expressions, null handling, and troubleshooting.
+
 ## Usage
 
 ### Start Demo
