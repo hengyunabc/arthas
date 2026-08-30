@@ -1,6 +1,5 @@
 # monitor
 
-
 ::: tip
 Monitor method invocation.
 :::

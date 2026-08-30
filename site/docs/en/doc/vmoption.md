@@ -1,6 +1,5 @@
 # vmoption
 
-
 ::: tip
 Display, and update the vm diagnostic options.
 :::

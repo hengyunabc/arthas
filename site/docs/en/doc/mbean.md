@@ -1,6 +1,5 @@
 # mbean
 
-
 ::: tip
 show Mbean information
 :::

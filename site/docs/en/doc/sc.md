@@ -1,6 +1,5 @@
 # sc
 
-
 ::: tip
 Search classes loaded by JVM.
 :::

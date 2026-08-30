@@ -1,6 +1,5 @@
 # jad
 
-
 ::: tip
 Decompile the specified classes.
 :::

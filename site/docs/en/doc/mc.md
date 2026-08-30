@@ -1,6 +1,5 @@
 # mc
 
-
 ## Usage
 
 ::: tip

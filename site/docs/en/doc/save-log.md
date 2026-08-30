@@ -1,6 +1,5 @@
 # Log command outputs
 
-
 ::: tip
 Log command outputs for later analysis
 :::

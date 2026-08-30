@@ -4,7 +4,6 @@
 Recommend to use the [retransform](retransform.md) command.
 :::
 
-
 ::: tip
 Load the external `*.class` files to re-define the loaded classes in JVM.
 :::

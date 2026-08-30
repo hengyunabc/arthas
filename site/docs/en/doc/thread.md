@@ -1,6 +1,5 @@
 # thread
 
-
 ::: tip
 Check the basic info and stack trace of the target thread.
 :::

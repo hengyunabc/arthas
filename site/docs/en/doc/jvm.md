@@ -1,6 +1,5 @@
 # jvm
 
-
 ::: tip
 Check the current JVM's info
 :::

@@ -1,6 +1,5 @@
 # sysenv
 
-
 ::: tip
 View the current JVM environment variables.
 :::

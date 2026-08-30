@@ -1,6 +1,5 @@
 # sysprop
 
-
 ::: tip
 Examine the system properties from the target JVM
 :::

@@ -1,6 +1,5 @@
 # echo
 
-
 ::: tip
 打印参数，和 linux 里的 echo 命令类似。
 :::

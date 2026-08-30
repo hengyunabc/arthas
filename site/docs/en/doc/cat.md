@@ -1,6 +1,5 @@
 # cat
 
-
 ::: tip
 Concatenate and print files
 :::

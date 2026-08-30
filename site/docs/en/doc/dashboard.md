@@ -1,6 +1,5 @@
 # dashboard
 
-
 ::: tip
 This is the real time statistics dashboard for the current system, press `Ctrl+C` to exit.
 :::

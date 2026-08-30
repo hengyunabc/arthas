@@ -1,6 +1,5 @@
 # keymap
 
-
 Use `keymap` command to print the current keymap:
 
 The default keymap is:

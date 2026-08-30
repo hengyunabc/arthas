@@ -1,6 +1,5 @@
 # stack
 
-
 ::: tip
 Print out the full call stack of the current method.
 :::

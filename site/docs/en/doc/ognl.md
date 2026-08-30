@@ -1,6 +1,5 @@
 # ognl
 
-
 ::: tip
 Execute ognl expression.
 :::

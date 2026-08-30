@@ -1,6 +1,5 @@
 # sysenv
 
-
 ::: tip
 查看当前 JVM 的环境属性(`System Environment Variables`)
 :::

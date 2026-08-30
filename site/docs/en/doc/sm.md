@@ -1,6 +1,5 @@
 # sm
 
-
 ::: tip
 Search method from the loaded classes.
 :::

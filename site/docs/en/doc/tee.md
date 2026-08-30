@@ -1,6 +1,5 @@
 # tee
 
-
 ::: tip
 Similar to the traditional `tee` command, it is used to read standard input data and output its contents into a file.
 

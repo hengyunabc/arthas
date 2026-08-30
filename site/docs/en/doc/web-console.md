@@ -1,6 +1,5 @@
 # Web Console
 
-
 ## Connect arthas through the browser
 
 Arthas supports the Web Console. After attach success, the user can access: [http://127.0.0.1:8563/](http://127.0.0.1:8563/).

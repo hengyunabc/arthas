@@ -1,6 +1,5 @@
 # sysprop
 
-
 ::: tip
 查看当前 JVM 的系统属性(`System Property`)
 :::

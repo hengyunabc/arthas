@@ -1,6 +1,5 @@
 # Web Console
 
-
 ## 通过浏览器连接 arthas
 
 Arthas 目前支持 Web Console，用户在 attach 成功之后，可以直接访问：[http://127.0.0.1:8563/](http://127.0.0.1:8563/)。

@@ -1,6 +1,5 @@
 # jfr
 
-
 ::: tip
 Java Flight Recorder (JFR) is a tool for collecting diagnostic and profiling data about a running Java application. It is integrated into the Java Virtual Machine (JVM) and causes almost no performance overhead, so it can be used even in heavily loaded production environments.
 :::

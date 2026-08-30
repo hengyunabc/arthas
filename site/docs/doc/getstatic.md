@@ -1,6 +1,5 @@
 # getstatic
 
-
 ### 使用参考
 
 - 推荐直接使用[ognl](ognl.md)命令，更加灵活。

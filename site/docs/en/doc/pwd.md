@@ -1,6 +1,5 @@
 # pwd
 
-
 ::: tip
 Return working directory name
 :::

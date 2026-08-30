@@ -1,6 +1,5 @@
 # perfcounter
 
-
 ::: tip
 Check the current JVM Perf Counter information.
 :::

@@ -1,6 +1,5 @@
 # grep
 
-
 ::: tip
 Similar to the traditional `grep` command.
 :::

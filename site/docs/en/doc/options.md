@@ -1,6 +1,5 @@
 # options
 
-
 ::: tip
 Global options
 :::

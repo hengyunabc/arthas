@@ -1,6 +1,5 @@
 # getstatic
 
-
 ## Usage
 
 - It is recommended to use the [OGNL] (ognl.md) command, which will be more flexible.

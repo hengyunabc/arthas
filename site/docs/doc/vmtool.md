@@ -4,7 +4,6 @@
 @since 3.5.1
 :::
 
-
 `vmtool` 利用`JVMTI`接口，实现查询内存对象，强制 GC 等功能。
 
 - [JVM Tool Interface](https://docs.oracle.com/javase/8/docs/platform/jvmti/jvmti.html)

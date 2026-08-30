@@ -1,6 +1,5 @@
 # mbean
 
-
 ::: tip
 查看 Mbean 的信息
 :::
