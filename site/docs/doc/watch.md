@@ -1,6 +1,5 @@
 # watch
 
-[`watch`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=cn&id=command-watch)
 
 ::: tip
 函数执行数据观测

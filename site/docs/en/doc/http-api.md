@@ -1,6 +1,5 @@
 # Http API
 
-[`Http API` online tutorial](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=en&id=case-http-api)
 
 ## Overview
 

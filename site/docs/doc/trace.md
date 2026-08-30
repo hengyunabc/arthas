@@ -1,6 +1,5 @@
 # trace
 
-[`trace`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=cn&id=command-trace)
 
 ::: tip
 方法内部调用路径，并输出方法路径上的每个节点上耗时

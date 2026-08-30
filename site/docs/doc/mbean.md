@@ -1,6 +1,5 @@
 # mbean
 
-[`mbean`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=cn&id=command-mbean)
 
 ::: tip
 查看 Mbean 的信息

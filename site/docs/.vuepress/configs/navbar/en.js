@@ -4,11 +4,6 @@ export const navbarEN = [
     link: "/en/",
   },
   {
-    text: "ONLINE TUTORIALS",
-    link: "/doc/arthas-tutorials.html?language=en&id=arthas-basics",
-    target: "_blank",
-  },
-  {
     text: "DOCS",
     link: "/en/doc",
   },

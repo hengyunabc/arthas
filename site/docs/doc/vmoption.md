@@ -1,6 +1,5 @@
 # vmoption
 
-[`vmoption`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=cn&id=command-vmoption)
 
 ::: tip
 查看，更新 VM 诊断相关的参数

@@ -1,6 +1,5 @@
 # reset
 
-[`reset` online tutorial](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=en&id=command-reset)
 
 ::: tip
 Reset all classes that have been enhanced by Arthas. These enhanced classes will also be reset when Arthas server is `stop`.

@@ -1,6 +1,5 @@
 # jvm
 
-[`jvm`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=cn&id=command-jvm)
 
 ::: tip
 查看当前 JVM 信息

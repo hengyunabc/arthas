@@ -1,6 +1,5 @@
 # classloader
 
-[`classloader`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials?language=cn&id=command-classloader)
 
 ::: tip
 查看 classloader 的继承树，urls，类加载信息

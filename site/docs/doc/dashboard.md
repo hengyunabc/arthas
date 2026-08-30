@@ -1,6 +1,5 @@
 # dashboard
 
-[`dashboard`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=cn&id=command-dashboard)
 
 ::: tip
 当前系统的实时数据面板，按 ctrl+c 退出。

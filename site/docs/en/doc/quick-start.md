@@ -1,6 +1,6 @@
 # Quick Start
 
-You can practice it yourself by following the instructions below, or you can use our [online tutorials](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=en&id=arthas-basics) to get started quickly.
+You can follow the instructions below to practice and get started quickly.
 
 ## 1. Start math-game
 
@@ -224,7 +224,7 @@ ts=2018-11-28 19:22:35; [cost=29.969732ms] result=@ArrayList[
 ]
 ```
 
-Pls. refer to [Arthas advanced](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=en&id=arthas-advanced) for more information.
+Please refer to [Advanced Usage](advanced-use.md) for more information.
 
 ## 7. Exit Arthas
 

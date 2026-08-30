@@ -1,6 +1,5 @@
 # retransform
 
-[`mc-retransform`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials?language=cn&id=command-mc-retransform)
 
 ::: tip
 加载外部的`.class`文件，retransform jvm 已加载的类。

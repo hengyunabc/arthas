@@ -1,6 +1,5 @@
 # dashboard
 
-[`dashboard` online tutorial](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=en&id=command-dashboard)
 
 ::: tip
 This is the real time statistics dashboard for the current system, press `Ctrl+C` to exit.

@@ -4,7 +4,6 @@
 @since 3.5.1
 :::
 
-[`vmtool`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=cn&id=command-vmtool)
 
 `vmtool` 利用`JVMTI`接口，实现查询内存对象，强制 GC 等功能。
 

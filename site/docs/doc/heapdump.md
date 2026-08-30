@@ -1,6 +1,5 @@
 # heapdump
 
-[`heapdump`在线教程](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=cn&id=command-heapdump)
 
 ::: tip
 dump java heap, 类似 jmap 命令的 heap dump 功能。

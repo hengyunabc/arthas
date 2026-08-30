@@ -4,11 +4,6 @@ export const navbarZH = [
     link: "/",
   },
   {
-    text: "在线教程",
-    link: "/doc/arthas-tutorials.html?language=cn&id=arthas-basics",
-    target: "_blank",
-  },
-  {
     text: "文档",
     link: "/doc/",
   },

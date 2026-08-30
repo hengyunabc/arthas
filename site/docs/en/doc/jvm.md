@@ -1,6 +1,5 @@
 # jvm
 
-[`jvm` online tutorial](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=en&id=command-jvm)
 
 ::: tip
 Check the current JVM's info
