@@ -9,7 +9,6 @@ public class WelcomeModel extends ResultModel {
     private String time;
     private String version;
     private String wiki;
-    private String tutorials;
     private String mainClass;
 
     public WelcomeModel() {
@@ -50,14 +49,6 @@ public class WelcomeModel extends ResultModel {
 
     public void setWiki(String wiki) {
         this.wiki = wiki;
-    }
-
-    public String getTutorials() {
-        return tutorials;
-    }
-
-    public void setTutorials(String tutorials) {
-        this.tutorials = tutorials;
     }
 
     public String getMainClass() {

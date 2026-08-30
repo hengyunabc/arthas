@@ -312,7 +312,6 @@ public class CommandExecutorImpl implements CommandExecutor {
         WelcomeModel welcomeModel = new WelcomeModel();
         welcomeModel.setVersion(ArthasBanner.version());
         welcomeModel.setWiki(ArthasBanner.wiki());
-        welcomeModel.setTutorials(ArthasBanner.tutorials());
         welcomeModel.setMainClass(PidUtils.mainClass());
         welcomeModel.setPid(PidUtils.currentPid());
         welcomeModel.setTime(DateUtils.getCurrentDateTime());

@@ -220,11 +220,6 @@ function requestFullScreen(element: HTMLElement) {
                 <span class="sr-only">(current)</span></a>
             </li>
             <li>
-              <a class="hover:text-sky-500 dark:hover:text-sky-400 text-sm"
-                href="https://arthas.aliyun.com/doc/arthas-tutorials.html" target="_blank">Online
-                Tutorials</a>
-            </li>
-            <li>
               <a class="hover:text-sky-500 dark:hover:text-sky-400 text-sm" href="https://github.com/alibaba/arthas"
                 target="_blank">Github</a>
             </li>
@@ -238,11 +233,6 @@ function requestFullScreen(element: HTMLElement) {
             <a class="hover:text-sky-500 dark:hover:text-sky-400 text-sm" href="https://arthas.aliyun.com/doc"
               target="_blank">Documentation
               <span class="sr-only">(current)</span></a>
-          </li>
-          <li>
-            <a class="hover:text-sky-500 dark:hover:text-sky-400 text-sm"
-              href="https://arthas.aliyun.com/doc/arthas-tutorials.html" target="_blank">Online
-              Tutorials</a>
           </li>
           <li>
             <a class="hover:text-sky-500 dark:hover:text-sky-400 text-sm" href="https://github.com/alibaba/arthas"

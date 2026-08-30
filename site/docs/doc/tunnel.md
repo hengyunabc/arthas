@@ -64,7 +64,6 @@ attach 成功之后，会打印出 agentId，比如：
 
 
 wiki      https://arthas.aliyun.com/doc
-tutorials https://arthas.aliyun.com/doc/arthas-tutorials.html
 version   3.1.2
 pid       86183
 time      2019-08-30 15:40:53
@@ -129,7 +128,6 @@ Escape character is '^]'.
 
 
 wiki       https://arthas.aliyun.com/doc
-tutorials  https://arthas.aliyun.com/doc/arthas-tutorials.html
 version    3.5.3
 main_class demo.MathGame
 pid        65825

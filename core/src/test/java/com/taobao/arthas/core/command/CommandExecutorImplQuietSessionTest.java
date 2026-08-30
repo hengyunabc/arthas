@@ -1,5 +1,6 @@
 package com.taobao.arthas.core.command;
 
+import com.alibaba.fastjson2.JSON;
 import com.taobao.arthas.core.command.model.InputStatusModel;
 import com.taobao.arthas.core.command.model.MessageModel;
 import com.taobao.arthas.core.command.model.ResultModel;
@@ -41,6 +42,7 @@ class CommandExecutorImplQuietSessionTest {
         assertThat(results).anyMatch(MessageModel.class::isInstance);
         assertThat(results).anyMatch(WelcomeModel.class::isInstance);
         assertThat(results).anyMatch(InputStatusModel.class::isInstance);
+        assertThat(JSON.toJSONString(results)).doesNotContain("\"tutorials\"");
         assertThat((Object) sessionManager.lastSession.get(Session.QUIET)).isNull();
     }
 

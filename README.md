@@ -44,10 +44,6 @@ Arthas was built to solve these issues. A developer can troubleshoot your produc
 * Supports Linux/Mac/Windows.
 
 
-### Online Tutorials(Recommended)
-
-* [View](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=en)
-
 ### Quick start
 
 #### Use `arthas-boot`(Recommended)
@@ -80,7 +76,6 @@ You can enter its interactive interface by executing `as.sh`, or execute `as.sh 
 
 ### Documentation
 
-* [Online Tutorials(Recommended)](https://arthas.aliyun.com/doc/arthas-tutorials.html?language=en)
 * [User manual](https://arthas.aliyun.com/doc/en)
 * [Installation](https://arthas.aliyun.com/doc/en/install-detail.html)
 * [Download](https://arthas.aliyun.com/doc/en/download.html)
