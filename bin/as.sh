@@ -373,12 +373,15 @@ update_if_necessary()
     fi
     echo "updating version ${update_version} ..."
 
-    # 在目标文件系统中解压，验证完成后再替换目录；子 shell 负责清理所有失败路径。
-    mkdir -p "${ARTHAS_LIB_DIR}/${update_version}" || return 1
-    local temp_target_lib_dir
-    temp_target_lib_dir=$(mktemp -d "${ARTHAS_LIB_DIR}/${update_version}/.arthas.XXXXXX") || return 1
-    trap 'rm -rf "${temp_target_lib_dir}"' EXIT
-    local temp_target_lib_zip="${temp_target_lib_dir}/arthas-${update_version}-bin.zip"
+    # 暂存目录保持隐藏，下载失败时不会留下被 Java 启动器误选的空版本目录。
+    mkdir -p "${ARTHAS_LIB_DIR}" || return 1
+    local temp_dir
+    temp_dir=$(mktemp -d "${ARTHAS_LIB_DIR}/.arthas.XXXXXX") || return 1
+    trap 'rm -rf "${temp_dir}"' EXIT
+    local temp_target_lib_dir="${temp_dir}/arthas"
+    local temp_target_lib_zip="${temp_dir}/arthas-${update_version}-bin.zip"
+    # 正式安装使用 mkdir 按 umask 创建的目录，避免继承 mktemp 的 0700 权限。
+    mkdir "${temp_target_lib_dir}" || return 1
 
     local downloadUrl="${REMOTE_DOWNLOAD_URL//PLACEHOLDER_REPO/${REPO_MIRROR}}"
     downloadUrl="${downloadUrl//PLACEHOLDER_VERSION/${update_version}}"
@@ -398,6 +401,7 @@ update_if_necessary()
     if is_arthas_home "${target_lib_dir}"; then
         return 0
     fi
+    mkdir -p "${ARTHAS_LIB_DIR}/${update_version}" || return 1
     rm -rf "${target_lib_dir}" || return 1
     mv "${temp_target_lib_dir}" "${target_lib_dir}" || return 1
     echo "update completed."

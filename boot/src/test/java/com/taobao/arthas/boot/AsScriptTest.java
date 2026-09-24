@@ -11,6 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.attribute.PosixFilePermissions;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -91,8 +92,9 @@ public class AsScriptTest {
         String script = new String(Files.readAllBytes(project.resolve("bin/as.sh")), StandardCharsets.UTF_8);
         int mainCall = script.lastIndexOf("\nmain \"${@}\"");
         assertTrue("Cannot locate launcher entry point", mainCall >= 0);
-        // 保留真实启动流程，仅把旧版本写死的 /tmp 改到测试临时目录。
-        script = script.substring(0, mainCall) + "\nTMP_DIR=\"$AS_TEST_TMP_DIR\"" + script.substring(mainCall);
+        // 显式设置 umask，避免宿主设置影响权限断言；旧版本的 /tmp 仍隔离到测试目录。
+        script = script.substring(0, mainCall) + "\numask \"$AS_TEST_UMASK\"\nTMP_DIR=\"$AS_TEST_TMP_DIR\""
+                        + script.substring(mainCall);
         launcher = temporaryFolder.newFile("as.sh").toPath();
         Files.write(launcher, script.getBytes(StandardCharsets.UTF_8));
 
@@ -101,6 +103,7 @@ public class AsScriptTest {
         environment.put("JAVA_HOME", javaHome.toString());
         environment.put("ARTHAS_LIB_DIR", library.toString());
         environment.put("LC_ALL", "C");
+        environment.put("AS_TEST_UMASK", "022");
         environment.put("AS_TEST_VERSION", "4.3.5");
         environment.put("AS_TEST_DOWNLOAD", download.toString());
         environment.put("AS_TEST_JAVA_CALLS", javaCalls.toString());
@@ -122,6 +125,23 @@ public class AsScriptTest {
         Path newest = library.resolve("4.3.10/arthas");
         assertHome(run(0, "--attach-only", "1234"), newest);
         assertComplete(newest);
+    }
+
+    @Test
+    public void downloadsRespectUmask() throws Exception {
+        String[][] permissions = { { "022", "rwxr-xr-x" }, { "027", "rwxr-x---" } };
+        for (int i = 0; i < permissions.length; i++) {
+            String version = "4.3." + (5 + i);
+            environment.put("AS_TEST_UMASK", permissions[i][0]);
+            environment.put("AS_TEST_VERSION", version);
+            Path home = library.resolve(version).resolve("arthas");
+            assertHome(run(0, "--attach-only", "1234"), home);
+            assertComplete(home);
+            assertEquals(PosixFilePermissions.fromString(permissions[i][1]), Files.getPosixFilePermissions(home));
+            assertEquals(PosixFilePermissions.fromString(permissions[i][1]),
+                            Files.getPosixFilePermissions(home.getParent()));
+        }
+        assertNoTemporaryDownloads();
     }
 
     @Test
@@ -163,8 +183,9 @@ public class AsScriptTest {
         Path previous = cache("4.3.4");
         createArchive(false);
         assertHome(run(0, "--attach-only", "1234"), previous);
-        assertFalse(Files.exists(library.resolve("4.3.5/arthas")));
+        assertFalse(Files.exists(library.resolve("4.3.5")));
         assertComplete(previous);
+        assertNoTemporaryDownloads();
     }
 
     @Test
@@ -172,6 +193,18 @@ public class AsScriptTest {
         Path previous = cache("4.3.4");
         Files.write(download, "not a zip archive".getBytes(StandardCharsets.UTF_8));
         assertHome(run(0, "--attach-only", "1234"), previous);
+        assertFalse(Files.exists(library.resolve("4.3.5")));
+        assertComplete(previous);
+        assertNoTemporaryDownloads();
+    }
+
+    @Test
+    public void failedDownloadDoesNotCreateVersionDirectory() throws Exception {
+        Path previous = cache("4.3.4");
+        environment.put("AS_TEST_DOWNLOAD_FAILURE", "true");
+        assertHome(run(0, "--attach-only", "1234"), previous);
+        // Java 启动器会枚举版本目录，失败下载不能留下一个虚假的最新版本。
+        assertFalse(Files.exists(library.resolve("4.3.5")));
         assertComplete(previous);
         assertNoTemporaryDownloads();
     }
@@ -182,6 +215,7 @@ public class AsScriptTest {
         Files.createDirectories(library.resolve("4.3.5/arthas"));
         environment.put("AS_TEST_DOWNLOAD_FAILURE", "true");
         assertHome(run(0, "--attach-only", "1234"), previous);
+        assertTrue(Files.isDirectory(library.resolve("4.3.5/arthas")));
         assertComplete(previous);
         assertNoTemporaryDownloads();
     }
@@ -193,6 +227,7 @@ public class AsScriptTest {
         String output = run(1, "--use-version", "4.3.5", "--attach-only", "1234");
         assertTrue(output, output.contains("Failed to install Arthas version 4.3.5"));
         assertEquals("", read(javaCalls));
+        assertFalse(Files.exists(library.resolve("4.3.5")));
         assertNoTemporaryDownloads();
     }
 
